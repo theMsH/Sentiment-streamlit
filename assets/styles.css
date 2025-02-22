@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-#sentiment-content, #sentiment-satisfied, #sentiment-neutral, #sentiment-dissatisfied {
+#sentiment-content>span, #sentiment-satisfied>span, #sentiment-neutral>span, #sentiment-dissatisfied>span {
     scale: 1.8;
 }
 
