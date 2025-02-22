@@ -6,7 +6,7 @@ from sklearn.svm import LinearSVC
 
 
 def train_model():
-    df = pd.read_csv("train.csv", encoding='unicode_escape')
+    df = pd.read_csv("assets/train.csv", encoding='unicode_escape')
 
     # Remove null values, otherwise sklearn Pipeline will fail with ValueError
     df.dropna(inplace=True)
