@@ -11,7 +11,6 @@ def load_css(file_path):
 
 load_css(pathlib.Path("assets/styles.css"))
 
-
 # State params
 if 'required_message' not in st.session_state:
     st.session_state.required_message = ""
@@ -27,11 +26,10 @@ if 'submitted' not in st.session_state:
 
 st.title("Sentiment analysis Streamlit App")
 
-
 # Result icon
 st.write('# ' + st.session_state.result_icon)
 # Result message
-st.html('<h1 class="result-message">'+ st.session_state.result_message +'</h1>')
+st.write('### '+ st.session_state.result_message)
 # Sent message
 if st.session_state.sent_message == "":
     st.write("")
@@ -56,7 +54,7 @@ def on_submit():
         elif sentiment == "negative":
             st.session_state.result_icon = ":material/sentiment_dissatisfied:"
 
-
+# Inputs
 with st.form("my_form"):
     st.text_area(
         label="Message",
